@@ -1,0 +1,18 @@
+{
+    "name": "loyaltydb-connector",
+    "config": {
+        "connector.class" : "io.debezium.connector.sqlserver.SqlServerConnector",
+        "tasks.max" : "1",
+        "database.server.name" : "WIN-SMDI014LTRD",
+        "database.hostname" : "192.168.254.216",
+        "database.port" : "1433",
+        "database.user" : "dbadmin",
+        "database.password" : "Jeb$2%vE1%@18*g2",
+        "database.dbname" : "VISTALOYALTY",
+        "database.applicationIntent": "ReadOnly",
+        "snapshot.isolation.mode": "snapshot",
+        "database.history.kafka.bootstrap.servers" : "kafka-cluster-kafka-bootstrap:9092",
+        "database.history.kafka.topic": "schema-changes.loyalty",
+	"change.tracking.tables": "dbo.cognetic_data_transaction"
+    }
+}

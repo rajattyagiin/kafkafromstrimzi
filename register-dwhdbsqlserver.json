@@ -1,0 +1,18 @@
+{
+    "name": "dwhdb1-connector",
+    "config": {
+        "connector.class" : "io.debezium.connector.sqlserver.SqlServerConnector",
+        "tasks.max" : "1",
+        "database.server.name" : "BIServer",
+        "database.hostname" : "dwhdb",
+        "database.port" : "1433",
+        "database.user" : "bhaskar",
+        "database.password" : "bhaskar@123",
+        "database.dbname" : "Loyalty_BIDB",
+        "database.applicationIntent": "ReadOnly",
+        "snapshot.isolation.mode": "snapshot",
+        "database.history.kafka.bootstrap.servers" : "kafka-cluster-kafka-bootstrap:9092",
+        "database.history.kafka.topic": "schema-changes.loyalty1",
+	"change.tracking.tables": "dbo.tblLoyalty_tbl_voucher"
+    }
+}
